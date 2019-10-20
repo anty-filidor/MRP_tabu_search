@@ -12,4 +12,4 @@ Usage of algorithm:
 
 `stats = TS(taboo_list_size=30, count_of_neighbours=30, mutation_ratio=0.5, epochs=200)`
 
-This is an implementation oh heuriscid described [here](https://en.wikipedia.org/wiki/Tabu_search)
+This is an implementation oh heuristic described [here](https://en.wikipedia.org/wiki/Tabu_search)
