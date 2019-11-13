@@ -5,10 +5,10 @@ path = '/Users/michal/PycharmProjects/MRP/datasets/*.tsp'
 data = Datasets(path)
 
 # name = 'ali535'
-name = 'berlin11_modified'
+# name = 'berlin11_modified'
 # name = 'berlin52'
 # name = 'fl417'
-# name = 'gr666'
+name = 'gr666'
 # name = 'kroA100'
 # name = 'kroA150'
 # name = 'nrw1379'

@@ -34,7 +34,7 @@ class TabooSearch:
         # return dataframe with rows sorted by shortest distance and index of permutation
         return pd.DataFrame(ranked_population, columns=['index', 'fitness'])
 
-    def __call__(self, taboo_list_size, count_of_neighbours, mutation_ratio, epochs):
+    def __call__(self, taboo_list_size, count_of_neighbours, mutation_ratio, epochs, plot_figure=True):
         # initialise containers for best individual at all
         individual_best = self._generate_individual()
         individual_best_fitness = self._rank_population([individual_best]).iloc[0]['fitness']
@@ -83,9 +83,10 @@ class TabooSearch:
             best_routes.append(individual_best)
 
         #  plot figure
-        plt.plot(best_distances)
-        plt.ylabel('Distance')
-        plt.xlabel('Epoch')
-        plt.show()
+        if plot_figure:
+            plt.plot(best_distances)
+            plt.ylabel('Distance')
+            plt.xlabel('Epoch')
+            plt.show()
 
         return dict(zip(best_distances, best_routes))
